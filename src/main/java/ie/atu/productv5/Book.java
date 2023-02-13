@@ -1,32 +1,31 @@
-package ie.atu.productv3;
+package ie.atu.productv5;
 
 import java.text.NumberFormat;
 
-public class Software extends Product {
+public class Book extends Product {
 
-    private String version;
+    private String author;
     private String code;
     private String description;
     private double price;
     protected static int count = 0;
-    
-    public Software() {
-        super();
-        version = "";
+
+    public Book() {
         description = "";
         code = "";
+        author = "";
         price = 0.0;
         count++;
     }
 
-    public void setVersion(String version) {
-        this.version = version;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public String getVersion() {
-        return version;
+    public String getAuthor() {
+        return author;
     }
-    
+
     public void setCode(String code) {
         this.code = code;
     }
@@ -57,11 +56,10 @@ public class Software extends Product {
     }
 
     public String toString() {
-        return description + " by " + version;
+        return description + " by " + author;
     }
 
     public static int getCount() {
         return count;
     }
-
 }
